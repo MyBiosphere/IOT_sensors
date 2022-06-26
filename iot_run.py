@@ -41,7 +41,7 @@ def co2_sensor():
 
 
 def temperature():
-    for i in range(3):
+    for i in range(5):
         try:
             temp = dhtDevice.temperature
             humidity = dhtDevice.humidity
@@ -49,6 +49,7 @@ def temperature():
         except Exception as e:
             print("dht error")
             print(e)
+            sleep(2)
             continue
         
         
