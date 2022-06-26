@@ -51,6 +51,7 @@ def temperature():
             print(e)
             continue
         
+        
 if __name__ == "__main__":
     ds = {}
     api_url = "http://my-biosphere.herokuapp.com/metrics/?format=api"
@@ -68,8 +69,7 @@ if __name__ == "__main__":
               "temperature" : str(temp[0]),
               "humidity" : str(temp[1])
               }
-        r = requests.post(url = api_url, data = ds)
-        print(r)
+        r = requests.post(url=api_url, data=ds)
     except RuntimeError as error:
         print(str(datetime.now()))
         print(error)
